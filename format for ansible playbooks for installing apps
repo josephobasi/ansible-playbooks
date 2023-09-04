@@ -1,0 +1,58 @@
+INSTALL A PACKAGE
+
+---
+- hosts: *ip address or group name of ip addresses*
+  become: yes
+  tasks:
+    - name: *Give this playbook function a name/description*
+      yum:
+        name: *package to install*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INSTALL MULTIPLE PACKAGES
+
+---
+- hosts: *ip address or group name of ip addresses*
+  become: yes
+  tasks:
+    - name: *Give this playbook function a name/description*
+      yum:
+        name:
+          - *package*
+          - *package*
+          - *package*
+          - *package* and so on...
+
+
+
+
+
+
+
+
+
+
+
+
+REMOVE A PACKAGE
+
+---
+- hosts: *ip address or group name of ip addresses*
+  become: yes
+  tasks:
+    - name: *Give this playbook function a name/description*
+      yum:
+        name: *package*
+        state: absent

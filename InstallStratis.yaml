@@ -1,0 +1,9 @@
+--- 
+- hosts: servers
+- become: yes
+  tasks:
+    - name: Install Stratis
+      yum: 
+        name: 
+          - stratis-cli
+          - stratisd

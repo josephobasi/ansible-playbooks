@@ -1,0 +1,30 @@
+1. Check if you have Python3 or higher in your system. If not. Install Python3.
+
+
+# dnf install python3 -y
+
+
+
+2. You must have the ansible repo enabled (if not already) to download ansible from it. If ansible is not an avaliable package, then you need the repo below:
+
+
+# subscription-manager repos --enable ansible-2.9-for-rhel-8-x86_64-rpms
+
+(This will enable the latest version of ansible)
+
+
+
+3. Once the repo is enabled, download ansible
+
+
+# dnf install ansible -y
+
+
+
+4. Copy the ansible server’s ssh key to the host servers. You need to do this in order for ansible to work. Go ahead and enable ‘PermitRootLogin’ and ‘PasswordAuthentication’ in all the host servers' /etc/ssh/sshd_config file by putting 'yes' after them. (You definitely need PasswordAuthentication enabled)
+
+
+5. You can start using ansible. Go into the /etc/ansible/hosts file. You will be able to make groups out of other servers’ ip addresses.
+
+
+6. You would create playbooks for ansible to execute the installations/updates. Ansible playbooks are writting in the ‘yaml’ programming language.
