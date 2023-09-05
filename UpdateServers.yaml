@@ -1,8 +1,8 @@
 ---
-- hosts: *ip address or group name of ip addresses*
+- hosts: servers
   become: yes
   tasks:
-    - name: *Give this playbook function a name/description*
+    - name: Update Servers
       yum:
         name: "*"
         state: latest
