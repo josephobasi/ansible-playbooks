@@ -1,0 +1,9 @@
+--- 
+- hosts: servers
+  become: yes 
+  tasks: 
+    - name: Install Vdo 
+      yum: 
+        name: 
+          - kmod-kvdo
+          - vdo 
