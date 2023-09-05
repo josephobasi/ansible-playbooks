@@ -56,3 +56,27 @@ REMOVE A PACKAGE
       yum:
         name: *package*
         state: absent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+UPDATE SERVERS
+
+---
+- hosts: *ip address or group name of ip addresses*
+  become: yes
+  tasks:
+    - name: *Give this playbook function a name/description*
+      yum:
+        name: "*"
+        state: latest
