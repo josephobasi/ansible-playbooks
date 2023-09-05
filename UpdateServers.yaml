@@ -1,0 +1,8 @@
+---
+- hosts: *ip address or group name of ip addresses*
+  become: yes
+  tasks:
+    - name: *Give this playbook function a name/description*
+      yum:
+        name: "*"
+        state: latest
